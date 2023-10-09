@@ -12,18 +12,18 @@ export default function HostPage(props) {
     const { params } = route;
     const { userID, userName, liveID } = params;
     randomUserID = String(Math.floor(Math.random() * 100000))
-    
+
     return (
-       
+
         <View style={styles.container}>
-        
+
             <ZegoUIKitPrebuiltLiveStreaming
                 ref={prebuiltRef}
-                appID={716281226}
-                appSign={'780bb01b66109d1b914d3dc73c43922aede18bb553bd724162fc7c5fbe08646d'}
+                appID={961511828}
+                appSign='fbf82ad64c08c495289156d5ed0636be6053559211ab27899b47fc4c93c58176'
                 userID={randomUserID}
-                userName={userName}
-                liveID={liveID}
+                userName={'user_' + randomUserID}
+                liveID='testLiveID'
 
                 config={{
                     ...HOST_DEFAULT_CONFIG,
@@ -54,13 +54,13 @@ export default function HostPage(props) {
                     onWindowMaximized: () => {
                         console.log('[Demo]HostPage onWindowMaximized');
                         props.navigation.navigate('HostPage', {
-                          userID: userID,
-                          userName: userName,
-                          liveID: liveID,
+                            userID: userID,
+                            userName: userName,
+                            liveID: liveID,
                         });
                     }
                 }}
-           
+
             />
         </View>
     );

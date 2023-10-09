@@ -32,7 +32,7 @@ export default function HomePage(props) {
             >
             </TextInput>
             <View style={[styles.buttonLine, styles.leftPadding]}>
-                <Button disabled={liveID.length == 0} style={styles.button} title="Start a live" onPress={() => { onJoinPress(true) }} />
+                <Button disabled={liveID.length == 0} style={styles.button} title="Iniciar uma Live" onPress={() => { onJoinPress(true) }} />
                 <View style={styles.buttonSpacing} />
                 <Button  disabled={liveID.length == 0} style={styles.button} title="Watch a live" onPress={() => { onJoinPress(false) }} />
             </View>
